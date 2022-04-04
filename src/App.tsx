@@ -42,22 +42,53 @@ const App = () => {
                 type="button"
                 className={`block absolute right-4 ${
                   toggleNavbar ? "active" : ""
-                }`}
+                } lg:hidden`}
                 onClick={() => setToggleNavbar(!toggleNavbar)}
               >
                 <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
                 <span className="hamburger-line transition duration-300 ease-in-out"></span>
                 <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
               </button>
-              {toggleNavbar && (
-                <nav>
-                  <ul>
-                    <li>
-                      <a href="#home">Beranda</a>
-                    </li>
-                  </ul>
-                </nav>
-              )}
+              <nav
+                className={`absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full ${
+                  toggleNavbar ? "" : "hidden"
+                } lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none`}
+              >
+                <ul className="block lg:flex">
+                  <li className="group">
+                    <a
+                      href="#home"
+                      className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >
+                      Beranda
+                    </a>
+                  </li>
+                  <li className="group">
+                    <a
+                      href="#about"
+                      className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >
+                      Tentang Saya
+                    </a>
+                  </li>
+                  <li className="group">
+                    <a
+                      href="#portofolio"
+                      className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >
+                      Portofolio
+                    </a>
+                  </li>
+                  <li className="group">
+                    <a
+                      href="#client"
+                      className="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    >
+                      Klien
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
