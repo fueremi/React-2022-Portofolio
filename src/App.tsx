@@ -20,6 +20,48 @@ const App = () => {
 
   return (
     <>
+      <header
+        className={`bg-transparent fixed top-0 left-0 w-full flex items-center z-10 ${
+          fixedNav ? "navbar-fixed" : ""
+        }`}
+      >
+        <div className="container">
+          <div className="flex items-center justify-between relative">
+            <div className="px-4">
+              <a
+                href="#home"
+                className="font-bold text-lg text-primary block py-6"
+              >
+                fueremi
+              </a>
+            </div>
+            <div className="flex items-center px-4">
+              <button
+                id="hamburger"
+                name="hamburger"
+                type="button"
+                className={`block absolute right-4 ${
+                  toggleNavbar ? "active" : ""
+                }`}
+                onClick={() => setToggleNavbar(!toggleNavbar)}
+              >
+                <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                <span className="hamburger-line transition duration-300 ease-in-out"></span>
+                <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+              </button>
+              {toggleNavbar && (
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="#home">Beranda</a>
+                    </li>
+                  </ul>
+                </nav>
+              )}
+            </div>
+          </div>
+        </div>
+      </header>
       <section id="home" className="pt-36">
         <div className="container">
           <div className="flex flex-wrap">
