@@ -469,7 +469,7 @@ const App = () => {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="pt-36 pb-32">
+      <section id="kontak" className="pt-36 pb-32">
         <div className="container">
           <div className="w-full px-4">
             <div className="max-w-xl mx-auto text-center mb-16">
@@ -622,7 +622,7 @@ const App = () => {
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="#kontak"
                     className="inline-block text-base text-slate-300 hover:text-primary mb-3"
                   >
                     Kontak
