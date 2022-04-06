@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import foto from "./assets/images/foto.png";
-import spotaindonesia from "./assets/images/sportaindonesia.png";
-import simantul from "./assets/images/simantul.png";
-import amartek from "./assets/images/amartek.png";
-import ati from "./assets/images/ati.png";
-import jm from "./assets/images/jm.png";
-import javis from "./assets/images/javis.png";
+import {
+  foto,
+  sportaindonesia,
+  simantul,
+  amartek,
+  ati,
+  jm,
+  javis,
+} from "./assets/images/";
 
 const App = () => {
   const [toggleNavbar, setToggleNavbar] = useState(false);
@@ -39,7 +41,7 @@ const App = () => {
                 href="#home"
                 className="font-bold text-lg text-primary block py-6"
               >
-                fueremi
+                Fueremi
               </a>
             </div>
             <div className="flex items-center px-4">
@@ -281,7 +283,7 @@ const App = () => {
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
                 <img
-                  src={spotaindonesia}
+                  src={sportaindonesia}
                   alt="sporta indonesia project"
                   width="w-full"
                 />
